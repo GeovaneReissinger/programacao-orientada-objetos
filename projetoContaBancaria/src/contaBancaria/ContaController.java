@@ -43,7 +43,7 @@ public class ContaController {
                 contas[total] = new ContaCorrente(titular, agencia, numeroConta, saldoInicial, Limite);
             }
             case 2 -> {
-                double taxaJuros = view.lerValor("Taxa de juros (ex.: 0.005 para 0.5% ) ");
+                double taxaJuros = view.lerValor("Taxa de juros (ex.: 0,005 para 0.5% ) ");
                 contas[total] = new ContaPoupanca(titular, agencia, numeroConta, saldoInicial, taxaJuros);
             }
             default -> {view.exibirMensagem("Tipo de conta inválido");
